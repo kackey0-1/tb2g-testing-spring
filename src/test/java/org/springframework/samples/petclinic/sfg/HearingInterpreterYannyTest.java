@@ -7,20 +7,19 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ActiveProfiles("base-test")
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {BaseConfig.class, LaurelConfig.class})
-public class HearingInterpreterTest {
+@ContextConfiguration(classes = {BaseConfig.class, YannyConfig.class})
+public class HearingInterpreterYannyTest {
 
     @Autowired
     HearingInterpreter hearingInterpreter;
 
     @Test
-    public void whatIHeard() {
+    public void testWhatIHeard() {
         String word = hearingInterpreter.whatIHeard();
-        assertEquals("Laurel", word);
+        assertEquals("Yanny", word);
     }
-
 }

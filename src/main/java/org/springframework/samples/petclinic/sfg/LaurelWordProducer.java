@@ -3,8 +3,8 @@ package org.springframework.samples.petclinic.sfg;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+//@Primary // Spring will configure this implemantation prioritly
 @Component
-@Primary // Spring will configure this implemantation prioritly
 public class LaurelWordProducer implements WordProducer {
     @Override
     public String getWord() {
